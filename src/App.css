@@ -1,26 +1,41 @@
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
+* {
+  box-sizing: border-box;
 }
 
 .wrapper {
   display: flex;
   margin: 0;
+  color: white;
   padding: 40px;
   width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(beach.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
   align-items: center;
   flex-direction: column;
+  /* justify-content: center; */
 }
 
 .search {
   display: flex;
   flex-direction: column;
   width: 220px;
+  margin-bottom: 20px;
 }
 
 .search input {
-  height: 30px;
+  min-height: 30px;
   border: 0;
-  border-bottom: 3px steelblue solid;
+  border-bottom: 2px white solid;
+  background: none;
+  color: white;
+}
+
+.search input::placeholder { color:#e6e6e6; }
+
+.claim {
+  text-align: center;
+  color: white;
+  margin: 10px;
 }

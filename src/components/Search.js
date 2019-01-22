@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import ShowUp from './ShowUp';
-import debounce from 'lodash.debounce';
+import Claim from './Claim';
 
 class Search extends Component {
   state = {
@@ -40,11 +40,12 @@ class Search extends Component {
     // console.log(this.state.images)
     return (
       <div className='wrapper'>
+        <Claim />
         <div className='search'>
-          <label htmlFor='search'>Search </label>
           <input 
           name='search'
           onChange={this.onTextChange}
+          placeholder='Search...'
           ></input>
         </div>
         {/* needed for clearing if input is empty */}
