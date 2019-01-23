@@ -30,6 +30,7 @@
   border-bottom: 2px white solid;
   background: none;
   color: white;
+  outline: none;
 }
 
 .search input::placeholder { color:#e6e6e6; }
@@ -38,4 +39,9 @@
   text-align: center;
   color: white;
   margin: 10px;
+  box-sizing: content-box;
 }
+
+@media (max-width: 350px) {
+  .claim {
+    font-size: 80%; } }
