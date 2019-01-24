@@ -2,6 +2,7 @@ import React, { Component, Fragment } from 'react';
 import axios from 'axios';
 import ShowUp from './ShowUp';
 import Claim from './Claim';
+import SearchField from './SearchField';
 
 class Search extends Component {
   state = {
@@ -41,13 +42,14 @@ class Search extends Component {
       <Fragment>
       <div className='wrapper'>
         <Claim />
-        <div className='search'>
+        <SearchField onTextChange={this.onTextChange}/>
+        {/* <div className='search'>
           <input 
           name='search'
           onChange={this.onTextChange}
           placeholder='Search...'
           ></input>
-        </div>
+        </div> */}
       </div>
       {/* needed for clearing if input is empty */}
       {this.state.images.length > 0 ? (<ShowUp images={this.state.images} />) : null}
