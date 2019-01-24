@@ -5,9 +5,9 @@ import Search from './components/Search';
 class App extends Component {
   render() {
     return (
-      <React.Fragment>
+      <div>
         <Search />
-      </React.Fragment>
+      </div>
     
     );
   }

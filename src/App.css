@@ -4,17 +4,16 @@
 
 .wrapper {
   display: flex;
-  margin: 0;
   color: white;
   padding: 40px;
   width: 100%;
-  height: 100vh;
+  height: 40vh;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(beach.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   align-items: center;
   flex-direction: column;
-  /* justify-content: center; */
+  justify-content: center;
 }
 
 .search {
@@ -45,3 +44,28 @@
 @media (max-width: 350px) {
   .claim {
     font-size: 80%; } }
+
+/* CSS for ShowUp.js */
+.container {
+  max-width: 900px;
+  margin: 20px auto;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 5px;
+  grid-row-gap: 20px;
+  text-align: center;
+  /* grid-template-rows: 1fr 1fr 1fr;  */
+}
+
+.grid img {
+    justify-self: center;
+    max-width: 80%;
+    max-height: 80%;
+    object-fit: cover;
+    display: block;
+    border: 3px solid steelblue;
+    border-radius: 5%;
+}

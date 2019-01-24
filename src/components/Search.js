@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import axios from 'axios';
 import ShowUp from './ShowUp';
 import Claim from './Claim';
@@ -26,12 +26,11 @@ class Search extends Component {
         })
       } else {
          // Axios request
-      axios.get(`${this.state.apiUrl}&q=${this.state.search}&image_type=photo`)
-      .then(res => this.setState({images: res.data.hits}))
-      .catch(err => console.log(err));
+        axios.get(`${this.state.apiUrl}&q=${this.state.search}&image_type=photo`)
+        .then(res => this.setState({images: res.data.hits}))
+        .catch(err => console.log(err));
+        }
       }
-      
-     }
     );
   }
 
@@ -39,6 +38,7 @@ class Search extends Component {
     // const { classes } = this.props;
     // console.log(this.state.images)
     return (
+      <Fragment>
       <div className='wrapper'>
         <Claim />
         <div className='search'>
@@ -48,9 +48,10 @@ class Search extends Component {
           placeholder='Search...'
           ></input>
         </div>
-        {/* needed for clearing if input is empty */}
-        {this.state.images.length > 0 ? (<ShowUp images={this.state.images} />) : null}
       </div>
+      {/* needed for clearing if input is empty */}
+      {this.state.images.length > 0 ? (<ShowUp images={this.state.images} />) : null}
+      </Fragment>
     )
   }
 }
