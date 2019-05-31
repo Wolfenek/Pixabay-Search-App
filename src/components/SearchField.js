@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const SearchField = (props) => {
   return (
@@ -13,5 +14,9 @@ const SearchField = (props) => {
     </div>
   );
 };
+
+SearchField.propTypes = {
+  onTextChange: PropTypes.func.isRequired
+}
 
 export default SearchField;

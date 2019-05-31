@@ -16,16 +16,6 @@ class ShowUp extends Component {
             )}
           </div>
         </div>
-        // <ul style={{listStyle: 'none', textAlign: 'center'}}>
-        //   {images.map(img => (<li key={img.id}
-        //     >
-        //     <img
-        //       src={img.webformatURL}
-        //       style={{width: '50%', height: '50%'}}
-        //     ></img>
-        //     </li>
-        //   ))}
-        // </ul>
       )
     } else {
       availableImages = null;
